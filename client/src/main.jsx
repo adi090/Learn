@@ -2,13 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { Provider } from 'react-redux'
-import Login from './pages/Login'
 import { appStore } from './app/store'
+import { Toaster } from 'sonner'
+import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={appStore}>
-    <Login />
+    <App />
+    <Toaster/>
     </Provider>
   </StrictMode>,
 )
